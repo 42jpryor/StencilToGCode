@@ -63,7 +63,7 @@ namespace StencilToGCode.UserControls
                 // Convert image to black and white
                 Bitmap bmp = new Bitmap(pictureBox1.Image);
 
-                int detailScale = 4;
+                int detailScale = trackBarImageDetailScale.Value;
 
                 // Scale image
                 int width = bmp.Width;
@@ -165,6 +165,11 @@ namespace StencilToGCode.UserControls
         {
             // Change label to show the value of the trackbar
             lblColorLimit.Text = trackBar1.Value.ToString();
+        }
+
+        private void trackBarImageDetailScale_ValueChanged(object sender, EventArgs e)
+        {
+            lblImageDetailScale.Text = trackBarImageDetailScale.Value.ToString();
         }
     }
 }
