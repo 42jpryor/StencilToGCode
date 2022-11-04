@@ -44,6 +44,9 @@
             this.txtPrinterHeight = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
             this.txtPrinterLength = new System.Windows.Forms.NumericUpDown();
+            this.trackBarImageDetailScale = new System.Windows.Forms.TrackBar();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.lblImageDetailScale = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
@@ -53,6 +56,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtPrinterWidth)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPrinterHeight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPrinterLength)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarImageDetailScale)).BeginInit();
+            this.tableLayoutPanel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -88,6 +93,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel2.ColumnCount = 1;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel5, 0, 3);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel4, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 0, 2);
             this.tableLayoutPanel2.Controls.Add(this.btnSelectImage, 0, 0);
@@ -138,6 +144,7 @@
             this.trackBar1.Name = "trackBar1";
             this.trackBar1.Size = new System.Drawing.Size(233, 43);
             this.trackBar1.TabIndex = 1;
+            this.trackBar1.TickStyle = System.Windows.Forms.TickStyle.Both;
             this.trackBar1.ValueChanged += new System.EventHandler(this.trackBar1_ValueChanged);
             // 
             // tableLayoutPanel3
@@ -296,6 +303,50 @@
             0,
             0});
             // 
+            // trackBarImageDetailScale
+            // 
+            this.trackBarImageDetailScale.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.trackBarImageDetailScale.Location = new System.Drawing.Point(3, 51);
+            this.trackBarImageDetailScale.Maximum = 5;
+            this.trackBarImageDetailScale.Minimum = 1;
+            this.trackBarImageDetailScale.Name = "trackBarImageDetailScale";
+            this.trackBarImageDetailScale.Size = new System.Drawing.Size(233, 43);
+            this.trackBarImageDetailScale.TabIndex = 1;
+            this.trackBarImageDetailScale.TickStyle = System.Windows.Forms.TickStyle.Both;
+            this.trackBarImageDetailScale.Value = 1;
+            this.trackBarImageDetailScale.ValueChanged += new System.EventHandler(this.trackBarImageDetailScale_ValueChanged);
+            // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel5.ColumnCount = 1;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel5.Controls.Add(this.lblImageDetailScale, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.trackBarImageDetailScale, 0, 1);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 312);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 2;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(239, 97);
+            this.tableLayoutPanel5.TabIndex = 2;
+            // 
+            // lblImageDetailScale
+            // 
+            this.lblImageDetailScale.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblImageDetailScale.AutoSize = true;
+            this.lblImageDetailScale.Location = new System.Drawing.Point(3, 17);
+            this.lblImageDetailScale.Name = "lblImageDetailScale";
+            this.lblImageDetailScale.Size = new System.Drawing.Size(233, 13);
+            this.lblImageDetailScale.TabIndex = 3;
+            this.lblImageDetailScale.Text = "Image Detail Scale:";
+            this.lblImageDetailScale.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // MainControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -315,6 +366,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtPrinterWidth)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPrinterHeight)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPrinterLength)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarImageDetailScale)).EndInit();
+            this.tableLayoutPanel5.ResumeLayout(false);
+            this.tableLayoutPanel5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -337,5 +391,8 @@
         private System.Windows.Forms.NumericUpDown txtPrinterHeight;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.NumericUpDown txtPrinterWidth;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
+        private System.Windows.Forms.Label lblImageDetailScale;
+        private System.Windows.Forms.TrackBar trackBarImageDetailScale;
     }
 }
