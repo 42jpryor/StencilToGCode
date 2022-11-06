@@ -20,6 +20,14 @@ namespace StencilToGCode.UserControls
 
             // Set picturebox to zoom
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+
+            // Load saved settings
+            txtPrinterWidth.Value = Properties.Settings.Default.PrinterWidth;
+            txtPrinterHeight.Value = Properties.Settings.Default.PrinterHeight;
+            txtPrinterLength.Value = Properties.Settings.Default.PrinterLength;
+            txtXOffset.Value = Properties.Settings.Default.XOffset;
+            txtYOffset.Value = Properties.Settings.Default.YOffset;
+            txtZOffset.Value = Properties.Settings.Default.ZOffset;
         }
 
         private void MainControl_Load(object sender, EventArgs e)
@@ -170,6 +178,42 @@ namespace StencilToGCode.UserControls
         private void trackBarImageDetailScale_ValueChanged(object sender, EventArgs e)
         {
             lblImageDetailScale.Text = trackBarImageDetailScale.Value.ToString();
+        }
+
+        private void txtPrinterWidth_ValueChanged(object sender, EventArgs e)
+        {
+            // Save settings
+            Properties.Settings.Default.PrinterWidth = txtPrinterWidth.Value;
+        }
+
+        private void txtPrinterLength_ValueChanged(object sender, EventArgs e)
+        {
+            // Save settings
+            Properties.Settings.Default.PrinterLength = txtPrinterLength.Value;
+        }
+
+        private void txtPrinterHeight_ValueChanged(object sender, EventArgs e)
+        {
+            // Save settings
+            Properties.Settings.Default.PrinterHeight = txtPrinterHeight.Value;
+        }
+
+        private void txtXOffset_ValueChanged(object sender, EventArgs e)
+        {
+            // Save settings
+            Properties.Settings.Default.XOffset = txtXOffset.Value;
+        }
+
+        private void txtYOffset_ValueChanged(object sender, EventArgs e)
+        {
+            // Save settings
+            Properties.Settings.Default.YOffset = txtYOffset.Value;
+        }
+
+        private void txtZOffset_ValueChanged(object sender, EventArgs e)
+        {
+            // Save settings
+            Properties.Settings.Default.ZOffset = txtZOffset.Value;
         }
     }
 }
