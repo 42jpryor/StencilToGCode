@@ -66,6 +66,13 @@ namespace StencilToGCode.UserControls
 
         private void btnConvert_Click(object sender, EventArgs e)
         {
+            // Must have width, length, and height greater than 0
+            if (txtPrinterWidth.Value <= 0 || txtPrinterLength.Value <= 0 || txtPrinterHeight.Value <= 0)
+            {
+                MessageBox.Show("Printer Width, Length, and Height must be greater than 0");
+                return;
+            }
+
             if (pictureBox1.Image != null)
             {
                 // Convert image to black and white

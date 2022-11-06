@@ -34,40 +34,40 @@
             this.lblImageDetailScale = new System.Windows.Forms.Label();
             this.trackBarImageDetailScale = new System.Windows.Forms.TrackBar();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtZOffset = new System.Windows.Forms.NumericUpDown();
             this.txtPrinterLength = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
+            this.txtXOffset = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtYOffset = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
             this.txtPrinterHeight = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.txtPrinterWidth = new System.Windows.Forms.NumericUpDown();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.lblColorLimit = new System.Windows.Forms.Label();
             this.btnConvert = new System.Windows.Forms.Button();
+            this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.btnSelectImage = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txtZOffset = new System.Windows.Forms.NumericUpDown();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtXOffset = new System.Windows.Forms.NumericUpDown();
-            this.txtYOffset = new System.Windows.Forms.NumericUpDown();
-            this.label8 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarImageDetailScale)).BeginInit();
             this.tableLayoutPanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtZOffset)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPrinterLength)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtXOffset)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtYOffset)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPrinterHeight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPrinterWidth)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtZOffset)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtXOffset)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtYOffset)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -185,6 +185,58 @@
             this.tableLayoutPanel4.Size = new System.Drawing.Size(239, 76);
             this.tableLayoutPanel4.TabIndex = 1;
             // 
+            // label8
+            // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label8.AutoSize = true;
+            this.tableLayoutPanel4.SetColumnSpan(this.label8, 2);
+            this.label8.Location = new System.Drawing.Point(121, 3);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(115, 13);
+            this.label8.TabIndex = 7;
+            this.label8.Text = "Offset (mm)";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(157, 60);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(17, 13);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "Z:";
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(157, 41);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(17, 13);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Y:";
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(157, 22);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(17, 13);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "X:";
+            // 
+            // txtZOffset
+            // 
+            this.txtZOffset.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtZOffset.DecimalPlaces = 4;
+            this.txtZOffset.Location = new System.Drawing.Point(180, 60);
+            this.txtZOffset.Name = "txtZOffset";
+            this.txtZOffset.Size = new System.Drawing.Size(56, 20);
+            this.txtZOffset.TabIndex = 5;
+            this.txtZOffset.ValueChanged += new System.EventHandler(this.txtZOffset_ValueChanged);
+            // 
             // txtPrinterLength
             // 
             this.txtPrinterLength.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -215,6 +267,16 @@
             this.label4.Text = "Length:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // txtXOffset
+            // 
+            this.txtXOffset.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtXOffset.DecimalPlaces = 4;
+            this.txtXOffset.Location = new System.Drawing.Point(180, 22);
+            this.txtXOffset.Name = "txtXOffset";
+            this.txtXOffset.Size = new System.Drawing.Size(56, 20);
+            this.txtXOffset.TabIndex = 3;
+            this.txtXOffset.ValueChanged += new System.EventHandler(this.txtXOffset_ValueChanged);
+            // 
             // label1
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -226,6 +288,16 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Printer Size (mm)";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtYOffset
+            // 
+            this.txtYOffset.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtYOffset.DecimalPlaces = 4;
+            this.txtYOffset.Location = new System.Drawing.Point(180, 41);
+            this.txtYOffset.Name = "txtYOffset";
+            this.txtYOffset.Size = new System.Drawing.Size(56, 20);
+            this.txtYOffset.TabIndex = 4;
+            this.txtYOffset.ValueChanged += new System.EventHandler(this.txtYOffset_ValueChanged);
             // 
             // label3
             // 
@@ -306,20 +378,6 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(239, 76);
             this.tableLayoutPanel3.TabIndex = 2;
             // 
-            // trackBar1
-            // 
-            this.trackBar1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel3.SetColumnSpan(this.trackBar1, 2);
-            this.trackBar1.Location = new System.Drawing.Point(3, 41);
-            this.trackBar1.Maximum = 255;
-            this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(233, 32);
-            this.trackBar1.TabIndex = 1;
-            this.trackBar1.TickStyle = System.Windows.Forms.TickStyle.Both;
-            this.trackBar1.ValueChanged += new System.EventHandler(this.trackBar1_ValueChanged);
-            // 
             // lblColorLimit
             // 
             this.lblColorLimit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -343,6 +401,20 @@
             this.btnConvert.Text = "Convert To Outline";
             this.btnConvert.UseVisualStyleBackColor = true;
             this.btnConvert.Click += new System.EventHandler(this.btnConvert_Click);
+            // 
+            // trackBar1
+            // 
+            this.trackBar1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel3.SetColumnSpan(this.trackBar1, 2);
+            this.trackBar1.Location = new System.Drawing.Point(3, 41);
+            this.trackBar1.Maximum = 255;
+            this.trackBar1.Name = "trackBar1";
+            this.trackBar1.Size = new System.Drawing.Size(233, 32);
+            this.trackBar1.TabIndex = 1;
+            this.trackBar1.TickStyle = System.Windows.Forms.TickStyle.Both;
+            this.trackBar1.ValueChanged += new System.EventHandler(this.trackBar1_ValueChanged);
             // 
             // btnSelectImage
             // 
@@ -368,78 +440,6 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // txtZOffset
-            // 
-            this.txtZOffset.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtZOffset.DecimalPlaces = 4;
-            this.txtZOffset.Location = new System.Drawing.Point(180, 60);
-            this.txtZOffset.Name = "txtZOffset";
-            this.txtZOffset.Size = new System.Drawing.Size(56, 20);
-            this.txtZOffset.TabIndex = 5;
-            this.txtZOffset.ValueChanged += new System.EventHandler(this.txtZOffset_ValueChanged);
-            // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(157, 22);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(17, 13);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "X:";
-            // 
-            // label6
-            // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(157, 41);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(17, 13);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "Y:";
-            // 
-            // label7
-            // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(157, 60);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(17, 13);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "Z:";
-            // 
-            // txtXOffset
-            // 
-            this.txtXOffset.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtXOffset.DecimalPlaces = 4;
-            this.txtXOffset.Location = new System.Drawing.Point(180, 22);
-            this.txtXOffset.Name = "txtXOffset";
-            this.txtXOffset.Size = new System.Drawing.Size(56, 20);
-            this.txtXOffset.TabIndex = 3;
-            this.txtXOffset.ValueChanged += new System.EventHandler(this.txtXOffset_ValueChanged);
-            // 
-            // txtYOffset
-            // 
-            this.txtYOffset.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtYOffset.DecimalPlaces = 4;
-            this.txtYOffset.Location = new System.Drawing.Point(180, 41);
-            this.txtYOffset.Name = "txtYOffset";
-            this.txtYOffset.Size = new System.Drawing.Size(56, 20);
-            this.txtYOffset.TabIndex = 4;
-            this.txtYOffset.ValueChanged += new System.EventHandler(this.txtYOffset_ValueChanged);
-            // 
-            // label8
-            // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label8.AutoSize = true;
-            this.tableLayoutPanel4.SetColumnSpan(this.label8, 2);
-            this.label8.Location = new System.Drawing.Point(121, 3);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(115, 13);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "Offset (mm)";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // MainControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -455,16 +455,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.trackBarImageDetailScale)).EndInit();
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtZOffset)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPrinterLength)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtXOffset)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtYOffset)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPrinterHeight)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPrinterWidth)).EndInit();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtZOffset)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtXOffset)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtYOffset)).EndInit();
             this.ResumeLayout(false);
 
         }
