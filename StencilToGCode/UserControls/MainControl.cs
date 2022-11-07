@@ -176,6 +176,85 @@ namespace StencilToGCode.UserControls
             }
         }
 
+
+        private void btnFindIntersections_Click(object sender, EventArgs e)
+        {
+            Bitmap bmp = new Bitmap(pictureBox1.Image);
+            Bitmap bmp2 = new Bitmap(bmp, bmp.Width, bmp.Height);
+            // Loop through each pixel in the image
+            for (int x = 0; x < bmp2.Width; x++)
+            {
+                for (int y = 0; y < bmp2.Height; y++)
+                {
+                    // If the pixel is black, check the surrounding pixels and if 3 or more are black, set the pixel to red, if not than set it to blue
+                    Color c = bmp2.GetPixel(x, y);
+
+                    if (c.R == 0 && c.G == 0 && c.B == 0)
+                    {
+                        // Check surrounding pixels including diagnols
+                        if (x > 0 && y > 0 && x < bmp2.Width - 1 && y < bmp2.Height - 1)
+                        {
+                            // Top pixel
+                            Color c2 = bmp2.GetPixel(x, y - 1);
+                            // Bottom pixel
+                            Color c3 = bmp2.GetPixel(x, y + 1);
+                            // Left pixel
+                            Color c4 = bmp2.GetPixel(x - 1, y);
+                            // Right pixel
+                            Color c5 = bmp2.GetPixel(x + 1, y);
+                            // Top left pixel
+                            Color c6 = bmp2.GetPixel(x - 1, y - 1);
+                            // Top right pixel
+                            Color c7 = bmp2.GetPixel(x + 1, y - 1);
+                            // Bottom left pixel
+                            Color c8 = bmp2.GetPixel(x - 1, y + 1);
+                            // Bottom right pixel
+                            Color c9 = bmp2.GetPixel(x + 1, y + 1);
+
+                            int blackCount = 0;
+
+                            if (c2.R == 0)
+                                blackCount++;
+                            if (c3.R == 0)
+                                blackCount++;
+                            if (c4.R == 0)
+                                blackCount++;
+                            if (c5.R == 0)
+                                blackCount++;
+                            if (c6.R == 0)
+                                blackCount++;
+                            if (c7.R == 0)
+                                blackCount++;
+                            if (c8.R == 0)
+                                blackCount++;
+                            if (c9.R == 0)
+                                blackCount++;
+
+                            if (blackCount >= 4)
+                            {
+                                bmp2.SetPixel(x, y, Color.Red);
+                            }
+                            else
+                            {
+                                bmp2.SetPixel(x, y, Color.Blue);
+                            }
+
+                        }
+                        else
+                        {
+                            bmp2.SetPixel(x, y, Color.White);
+                        }
+                    }
+                    else
+                    {
+                        bmp2.SetPixel(x, y, Color.White);
+                    }
+                }
+            }
+
+            pictureBox1.Image = bmp2;
+        }
+
         private void trackBar1_ValueChanged(object sender, EventArgs e)
         {
             // Change label to show the value of the trackbar
