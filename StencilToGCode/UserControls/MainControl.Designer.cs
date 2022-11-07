@@ -30,6 +30,7 @@
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnFindIntersections = new System.Windows.Forms.Button();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.lblImageDetailScale = new System.Windows.Forms.Label();
             this.trackBarImageDetailScale = new System.Windows.Forms.TrackBar();
@@ -92,6 +93,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel2.ColumnCount = 1;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Controls.Add(this.btnFindIntersections, 0, 4);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel5, 0, 3);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel4, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 0, 2);
@@ -106,6 +108,19 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(245, 412);
             this.tableLayoutPanel2.TabIndex = 1;
+            // 
+            // btnFindIntersections
+            // 
+            this.btnFindIntersections.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnFindIntersections.Location = new System.Drawing.Point(3, 331);
+            this.btnFindIntersections.Name = "btnFindIntersections";
+            this.btnFindIntersections.Size = new System.Drawing.Size(239, 78);
+            this.btnFindIntersections.TabIndex = 1;
+            this.btnFindIntersections.Text = "Find Intersections";
+            this.btnFindIntersections.UseVisualStyleBackColor = true;
+            this.btnFindIntersections.Click += new System.EventHandler(this.btnFindIntersections_Click);
             // 
             // tableLayoutPanel5
             // 
@@ -497,5 +512,6 @@
         private System.Windows.Forms.NumericUpDown txtZOffset;
         private System.Windows.Forms.NumericUpDown txtXOffset;
         private System.Windows.Forms.NumericUpDown txtYOffset;
+        private System.Windows.Forms.Button btnFindIntersections;
     }
 }
