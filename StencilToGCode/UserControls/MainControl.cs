@@ -270,36 +270,43 @@ namespace StencilToGCode.UserControls
         {
             // Save settings
             Properties.Settings.Default.PrinterWidth = txtPrinterWidth.Value;
+            Properties.Settings.Default.Save();
         }
 
         private void txtPrinterLength_ValueChanged(object sender, EventArgs e)
         {
             // Save settings
             Properties.Settings.Default.PrinterLength = txtPrinterLength.Value;
+            Properties.Settings.Default.Save();
         }
 
         private void txtPrinterHeight_ValueChanged(object sender, EventArgs e)
         {
             // Save settings
             Properties.Settings.Default.PrinterHeight = txtPrinterHeight.Value;
+            Properties.Settings.Default.Save();
         }
 
         private void txtXOffset_ValueChanged(object sender, EventArgs e)
         {
             // Save settings
             Properties.Settings.Default.XOffset = txtXOffset.Value;
+            Properties.Settings.Default.Save();
         }
 
         private void txtYOffset_ValueChanged(object sender, EventArgs e)
         {
             // Save settings
             Properties.Settings.Default.YOffset = txtYOffset.Value;
+            Properties.Settings.Default.Save();
         }
 
         private void txtZOffset_ValueChanged(object sender, EventArgs e)
         {
             // Save settings
             Properties.Settings.Default.ZOffset = txtZOffset.Value;
+            Properties.Settings.Default.Save();
         }
+
     }
 }
