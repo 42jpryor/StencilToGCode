@@ -31,7 +31,6 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.btnFindIntersections = new System.Windows.Forms.Button();
-            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.lblImageDetailScale = new System.Windows.Forms.Label();
             this.trackBarImageDetailScale = new System.Windows.Forms.TrackBar();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
@@ -57,7 +56,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
-            this.tableLayoutPanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarImageDetailScale)).BeginInit();
             this.tableLayoutPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtZOffset)).BeginInit();
@@ -94,9 +92,8 @@
             this.tableLayoutPanel2.ColumnCount = 1;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Controls.Add(this.btnFindIntersections, 0, 4);
-            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel5, 0, 3);
-            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel4, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel4, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.btnSelectImage, 0, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -122,33 +119,15 @@
             this.btnFindIntersections.UseVisualStyleBackColor = true;
             this.btnFindIntersections.Click += new System.EventHandler(this.btnFindIntersections_Click);
             // 
-            // tableLayoutPanel5
-            // 
-            this.tableLayoutPanel5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel5.ColumnCount = 1;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel5.Controls.Add(this.lblImageDetailScale, 0, 0);
-            this.tableLayoutPanel5.Controls.Add(this.trackBarImageDetailScale, 0, 1);
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 249);
-            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
-            this.tableLayoutPanel5.RowCount = 2;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(239, 76);
-            this.tableLayoutPanel5.TabIndex = 2;
-            // 
             // lblImageDetailScale
             // 
             this.lblImageDetailScale.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblImageDetailScale.AutoSize = true;
-            this.lblImageDetailScale.Location = new System.Drawing.Point(3, 12);
+            this.lblImageDetailScale.Location = new System.Drawing.Point(3, 31);
             this.lblImageDetailScale.Name = "lblImageDetailScale";
-            this.lblImageDetailScale.Size = new System.Drawing.Size(233, 13);
+            this.lblImageDetailScale.Size = new System.Drawing.Size(113, 13);
             this.lblImageDetailScale.TabIndex = 3;
-            this.lblImageDetailScale.Text = "Image Detail Scale:";
+            this.lblImageDetailScale.Text = "1";
             this.lblImageDetailScale.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // trackBarImageDetailScale
@@ -156,13 +135,13 @@
             this.trackBarImageDetailScale.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.trackBarImageDetailScale.Location = new System.Drawing.Point(3, 41);
+            this.trackBarImageDetailScale.Location = new System.Drawing.Point(122, 28);
             this.trackBarImageDetailScale.Maximum = 5;
             this.trackBarImageDetailScale.Minimum = 1;
             this.trackBarImageDetailScale.Name = "trackBarImageDetailScale";
-            this.trackBarImageDetailScale.Size = new System.Drawing.Size(233, 32);
+            this.trackBarImageDetailScale.Size = new System.Drawing.Size(114, 19);
             this.trackBarImageDetailScale.TabIndex = 1;
-            this.trackBarImageDetailScale.TickStyle = System.Windows.Forms.TickStyle.Both;
+            this.trackBarImageDetailScale.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
             this.trackBarImageDetailScale.Value = 1;
             this.trackBarImageDetailScale.ValueChanged += new System.EventHandler(this.trackBarImageDetailScale_ValueChanged);
             // 
@@ -382,14 +361,17 @@
             this.tableLayoutPanel3.ColumnCount = 2;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Controls.Add(this.trackBarImageDetailScale, 1, 1);
+            this.tableLayoutPanel3.Controls.Add(this.btnConvert, 1, 2);
+            this.tableLayoutPanel3.Controls.Add(this.lblImageDetailScale, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.lblColorLimit, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.btnConvert, 1, 0);
-            this.tableLayoutPanel3.Controls.Add(this.trackBar1, 0, 1);
+            this.tableLayoutPanel3.Controls.Add(this.trackBar1, 1, 0);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 167);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 2;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.RowCount = 3;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(239, 76);
             this.tableLayoutPanel3.TabIndex = 2;
             // 
@@ -397,7 +379,7 @@
             // 
             this.lblColorLimit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblColorLimit.AutoSize = true;
-            this.lblColorLimit.Location = new System.Drawing.Point(3, 12);
+            this.lblColorLimit.Location = new System.Drawing.Point(3, 6);
             this.lblColorLimit.Name = "lblColorLimit";
             this.lblColorLimit.Size = new System.Drawing.Size(113, 13);
             this.lblColorLimit.TabIndex = 3;
@@ -409,9 +391,9 @@
             this.btnConvert.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnConvert.Location = new System.Drawing.Point(122, 3);
+            this.btnConvert.Location = new System.Drawing.Point(122, 53);
             this.btnConvert.Name = "btnConvert";
-            this.btnConvert.Size = new System.Drawing.Size(114, 32);
+            this.btnConvert.Size = new System.Drawing.Size(114, 20);
             this.btnConvert.TabIndex = 0;
             this.btnConvert.Text = "Convert To Outline";
             this.btnConvert.UseVisualStyleBackColor = true;
@@ -422,13 +404,12 @@
             this.trackBar1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel3.SetColumnSpan(this.trackBar1, 2);
-            this.trackBar1.Location = new System.Drawing.Point(3, 41);
+            this.trackBar1.Location = new System.Drawing.Point(122, 3);
             this.trackBar1.Maximum = 255;
             this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(233, 32);
+            this.trackBar1.Size = new System.Drawing.Size(114, 19);
             this.trackBar1.TabIndex = 1;
-            this.trackBar1.TickStyle = System.Windows.Forms.TickStyle.Both;
+            this.trackBar1.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
             this.trackBar1.ValueChanged += new System.EventHandler(this.trackBar1_ValueChanged);
             // 
             // btnSelectImage
@@ -461,12 +442,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "MainControl";
-            this.Size = new System.Drawing.Size(965, 486);
+            this.Size = new System.Drawing.Size(1105, 504);
             this.Load += new System.EventHandler(this.MainControl_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel5.ResumeLayout(false);
-            this.tableLayoutPanel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarImageDetailScale)).EndInit();
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
@@ -502,7 +481,6 @@
         private System.Windows.Forms.NumericUpDown txtPrinterHeight;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.NumericUpDown txtPrinterWidth;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.Label lblImageDetailScale;
         private System.Windows.Forms.TrackBar trackBarImageDetailScale;
         private System.Windows.Forms.Label label8;

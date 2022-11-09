@@ -62,7 +62,6 @@ namespace StencilToGCode.UserControls
                 {
                     // Read the first line from the file and write it the textbox.
                     btnSelectImage.Text = openFileDialog1.FileName;
-                    
                     pictureBox1.Image = Image.FromFile(openFileDialog1.FileName);
                     currentImage = new Bitmap(openFileDialog1.FileName);
                 }
@@ -81,7 +80,7 @@ namespace StencilToGCode.UserControls
             if (pictureBox1.Image != null)
             {
                 // Convert image to black and white
-                Bitmap bmp = new Bitmap(pictureBox1.Image);
+                Bitmap bmp = new Bitmap(currentImage);
 
                 int detailScale = trackBarImageDetailScale.Value;
 
