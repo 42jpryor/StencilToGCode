@@ -12,6 +12,7 @@ namespace StencilToGCode.UserControls
 {
     public partial class MainControl : UserControl
     {
+        Bitmap currentImage;
         public MainControl()
         {
             InitializeComponent();
@@ -63,6 +64,7 @@ namespace StencilToGCode.UserControls
                     btnSelectImage.Text = openFileDialog1.FileName;
                     
                     pictureBox1.Image = Image.FromFile(openFileDialog1.FileName);
+                    currentImage = new Bitmap(openFileDialog1.FileName);
                 }
             }
         }
