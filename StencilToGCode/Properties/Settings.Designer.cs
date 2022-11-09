@@ -94,5 +94,29 @@ namespace StencilToGCode.Properties {
                 this["ZOffset"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int EdgeTrackbar {
+            get {
+                return ((int)(this["EdgeTrackbar"]));
+            }
+            set {
+                this["EdgeTrackbar"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int ResolutionTrackbar {
+            get {
+                return ((int)(this["ResolutionTrackbar"]));
+            }
+            set {
+                this["ResolutionTrackbar"] = value;
+            }
+        }
     }
 }
