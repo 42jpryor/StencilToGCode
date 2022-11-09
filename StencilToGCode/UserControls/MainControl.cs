@@ -21,6 +21,7 @@ namespace StencilToGCode.UserControls
             // Set picturebox to zoom
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
 
+
             // Load saved settings
             txtPrinterWidth.Value = Properties.Settings.Default.PrinterWidth;
             txtPrinterHeight.Value = Properties.Settings.Default.PrinterHeight;
@@ -28,6 +29,8 @@ namespace StencilToGCode.UserControls
             txtXOffset.Value = Properties.Settings.Default.XOffset;
             txtYOffset.Value = Properties.Settings.Default.YOffset;
             txtZOffset.Value = Properties.Settings.Default.ZOffset;
+            trackBar1.Value = Properties.Settings.Default.EdgeTrackbar;
+            trackBarImageDetailScale.Value = Properties.Settings.Default.ResolutionTrackbar;
         }
 
         private void MainControl_Load(object sender, EventArgs e)
@@ -259,11 +262,15 @@ namespace StencilToGCode.UserControls
         {
             // Change label to show the value of the trackbar
             lblColorLimit.Text = trackBar1.Value.ToString();
+            Properties.Settings.Default.EdgeTrackbar = trackBar1.Value;
+            Properties.Settings.Default.Save();
         }
 
         private void trackBarImageDetailScale_ValueChanged(object sender, EventArgs e)
         {
             lblImageDetailScale.Text = trackBarImageDetailScale.Value.ToString();
+            Properties.Settings.Default.ResolutionTrackbar = trackBarImageDetailScale.Value;
+            Properties.Settings.Default.Save();
         }
 
         private void txtPrinterWidth_ValueChanged(object sender, EventArgs e)
